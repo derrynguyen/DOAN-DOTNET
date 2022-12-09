@@ -20,7 +20,7 @@ namespace QUANCAFFE
 
         }
         public static string displayUserName;
-      
+        public static int pEmpIds ;
         private void FMain_Load(object sender, EventArgs e)
         {
             MainForm.Hide();
@@ -125,6 +125,7 @@ namespace QUANCAFFE
             {
                 MainForm.Show();
                 txtTenNhanVien.Text = displayUserName.ToString();
+                pEmpIds = Account.Instance.getIDStaff(displayUserName);
 
             }
             else

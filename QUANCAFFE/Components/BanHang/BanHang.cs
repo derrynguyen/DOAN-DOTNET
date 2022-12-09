@@ -250,7 +250,7 @@ namespace QUANCAFFE.Components.BanHang
             //pCusId = id khách hàng được lấy qua tên khách hàng
             //pDiscounting giảm giá tổng tiền qua % được chọn từ combox discount
             //pDiscount tổng số tiền được giảm giá từ % giảm giá và điểm tích lũy của khách hàng
-            int pEmpId = Account.Instance.getIDStaff(txtDisPlayUser.Text);
+            int pEmpId = FMain.pEmpIds;
             int pCusId = Account.Instance.getIDCus(txtTenKhachHang.Text);
             double pDiscounting = double.Parse(NumberDiscount.SelectedItem.ToString()) * totail;
             double pDiscount = pDiscounting + double.Parse(txtDiem.Text);
