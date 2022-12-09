@@ -145,6 +145,7 @@
             this.btnThemKhachHang.TextMarginLeft = 0;
             this.btnThemKhachHang.TextPadding = new System.Windows.Forms.Padding(0);
             this.btnThemKhachHang.UseDefaultRadiusAndThickness = true;
+            this.btnThemKhachHang.Click += new System.EventHandler(this.btnThemKhachHang_Click);
             // 
             // txtSDT
             // 
