@@ -22,9 +22,13 @@ namespace QUANCAFFE.Components.ThongKe
         {
         }
 
-        private void btnQuayLai_Click(object sender, EventArgs e)
+      
+        private void btnQuayLai_Click_1(object sender, EventArgs e)
         {
             this.Hide();
         }
+
+      
+     
     }
 }

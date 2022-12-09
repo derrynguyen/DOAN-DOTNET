@@ -78,25 +78,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CaffeDAO\AccountDAO.cs" />
-    <Compile Include="CaffeDAO\CustommerDAO.cs" />
-    <Compile Include="CaffeDAO\DataProvider.cs" />
-    <Compile Include="CaffeDAO\OrdersDAO.cs" />
-    <Compile Include="CaffeDAO\OrdersDetailDAO.cs" />
-    <Compile Include="CaffeDAO\ProductDAO.cs" />
-    <Compile Include="CaffeDTO\OrdersDetail.cs" />
-    <Compile Include="CaffeDTO\Product.cs" />
+    <Compile Include="MyCoffeDTO\Account.cs" />
+    <Compile Include="MyCoffeDTO\CustommerDAO.cs" />
+    <Compile Include="MyCoffeDTO\DataProvider.cs" />
+    <Compile Include="MyCoffeDTO\EmployeesDAO.cs" />
+    <Compile Include="MyCoffeDTO\Orders.cs" />
+    <Compile Include="MyCoffeDTO\OrdersDetailDAO.cs" />
+    <Compile Include="MyCoffeDTO\ProductDAO.cs" />
+    <Compile Include="MyCoffeDTO\SalaryDAO.cs" />
+    <Compile Include="MyCoffeeDAO\Custommers.cs" />
+    <Compile Include="MyCoffeeDAO\OrderDetail.cs" />
+    <Compile Include="MyCoffeeDAO\Product.cs" />
     <Compile Include="Components\BanHang\BanHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\BanHang\BanHang.Designer.cs">
       <DependentUpon>BanHang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Components\BanHang\Item.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="Components\BanHang\Item.Designer.cs">
-      <DependentUpon>Item.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\BanHang\KhachHang.cs">
       <SubType>Form</SubType>
@@ -144,9 +141,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Components\BanHang\BanHang.resx">
       <DependentUpon>BanHang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Components\BanHang\Item.resx">
-      <DependentUpon>Item.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\BanHang\KhachHang.resx">
       <DependentUpon>KhachHang.cs</DependentUpon>

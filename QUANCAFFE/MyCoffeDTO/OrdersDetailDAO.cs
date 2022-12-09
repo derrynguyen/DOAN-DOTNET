@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MyCoffee.Same;
 
-namespace QUANCAFFE.CaffeDAO
+namespace MyCoffee.MyCoffeeDAO
 {
     class OrdersDetailDAO
     {
@@ -35,7 +36,7 @@ namespace QUANCAFFE.CaffeDAO
         public void saveOrderDetails(int pOrderID, int pProductID, int pQuantity)
         {
             string qurey = "saveOrderDetails @OrderID , @ProductID , @Quantity";
-            DataProvider.Instance.ExecutedNonQuery(qurey, new object[] { pOrderID, pProductID, pQuantity });
+            DataProvider.Instance.ExecutedNonQuery(qurey, new object[] {pOrderID,pProductID,pQuantity});
         }
     }
 }

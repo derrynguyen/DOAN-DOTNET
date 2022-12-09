@@ -1,22 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QUANCAFFE.CaffeDAO
+namespace MyCoffee.Same
 {
     public class DataProvider
     {
+        //singleton
+
         private static DataProvider instance;
 
-        public static DataProvider Instance
+        public static DataProvider Instance 
         {
-            get
-            {
-                if (instance == null)
+            get { 
+                if(instance == null)
                 {
                     instance = new DataProvider();
                 }
@@ -31,27 +32,27 @@ namespace QUANCAFFE.CaffeDAO
         private DataProvider() { }
 
 
-        private string con = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=chuckcaffe;Integrated Security=True";
-
+        private string con = "Data Source=(LocalDB)\\MSSQLLocalDB;Initial Catalog=CHUKCOFFEE;Integrated Security=True";
+     
 
         public DataTable ExecutedQuery(string query, object[] parameter = null)
-        {
-
+        {           
+         
 
             DataTable data = new DataTable();
             using (SqlConnection _cnn = new SqlConnection(con))
-            {
+            { 
                 _cnn.Open();
 
                 SqlCommand cmd = new SqlCommand(query, _cnn);
 
-                if (parameter != null)
+                if(parameter != null)
                 {
                     string[] listPara = query.Split(' ');
                     int i = 0;
-                    foreach (string item in listPara)
+                    foreach(string item in listPara)
                     {
-                        if (item.Contains("@"))
+                        if(item.Contains("@"))
                         {
                             cmd.Parameters.AddWithValue(item, parameter[i]);
                             i++;
@@ -67,14 +68,14 @@ namespace QUANCAFFE.CaffeDAO
             }
 
             return data;
-
+           
         }
 
         public int ExecutedNonQuery(string query, object[] parameter = null)
         {
 
             int data = 0;
-
+        
             using (SqlConnection _cnn = new SqlConnection(con))
             {
                 _cnn.Open();

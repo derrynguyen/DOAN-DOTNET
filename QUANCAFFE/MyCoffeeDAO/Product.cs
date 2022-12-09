@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QUANCAFFE.CaffeDTO
+namespace MyCoffee.MyCoffeDTO
 {
-    public class Product
+    public  class Product
     {
         private int iD;
 
@@ -17,8 +17,8 @@ namespace QUANCAFFE.CaffeDTO
 
         private string status;
 
-        public static int ProductWith = 70;
-        public static int ProductHeight = 70;
+        public static int ProductWith = 150 ;
+        public static int ProductHeight = 150;
         private DataRowCollection rows;
 
         public int ID { get => iD; set => iD = value; }
@@ -26,13 +26,15 @@ namespace QUANCAFFE.CaffeDTO
         public string Price { get => price; set => price = value; }
         public string Status { get => status; set => status = value; }
 
-        public Product(int id, string name, string price, string status)
-        {
+        public Product(int id, string name, string price, string status) {
             this.ID = id;
             this.Name = name;
             this.Price = price;
             this.Status = status;
         }
+
+        public Product()
+        { }
 
         public Product(DataRow row)
         {

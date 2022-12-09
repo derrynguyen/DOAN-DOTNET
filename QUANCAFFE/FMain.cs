@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyCoffee.MyCoffeeDAO;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +8,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using QUANCAFFE.CaffeDAO;
 
 namespace QUANCAFFE
 {
@@ -19,10 +19,8 @@ namespace QUANCAFFE
             txtMatKhau.PasswordChar = '*';
 
         }
-        public string displayUserName()
-        {
-            return txtTaiKhoan.Text;
-        }
+        public static string displayUserName;
+      
         private void FMain_Load(object sender, EventArgs e)
         {
             MainForm.Hide();
@@ -122,9 +120,12 @@ namespace QUANCAFFE
         {
             string username = txtTaiKhoan.Text;
             string password = txtMatKhau.Text;
+            displayUserName = username;
             if (LogIn(username, password))
             {
                 MainForm.Show();
+                txtTenNhanVien.Text = displayUserName.ToString();
+
             }
             else
             {
@@ -152,7 +153,7 @@ namespace QUANCAFFE
         #region Method
         public bool LogIn(string username, string password)
         {
-            return AccountDAO.Instance.LogIn(username, password);
+            return Account.Instance.LogIn(username, password);
         }
         #endregion
     }
