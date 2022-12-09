@@ -26,7 +26,7 @@ namespace MyCoffee.MyCoffeeDAO
         private OrdersDetailDAO() { }
 
 
-        public int getOrderID(string orderDay)
+        public int getOrderID(DateTime orderDay)
         {
             string query = "getOrderID @orderDay";
             int relust = (int)DataProvider.Instance.ExecutedScalar(query, new object[] { orderDay });

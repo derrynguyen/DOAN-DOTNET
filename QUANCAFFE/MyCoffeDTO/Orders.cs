@@ -22,7 +22,7 @@ namespace MyCoffee.MyCoffeeDAO
             private set => instance = value; 
         }
 
-        public void saveOrders(int Emp, int Cus, int totail, double discount, string date)
+        public void saveOrders(int Emp, int Cus, int totail, double discount, DateTime date)
         {
             string query = "SaveOrders  @CusID , @OrderDay , @totail , @discount , @EmpID";
             DataProvider.Instance.ExecutedNonQuery(query,new object[] {Cus,date,totail,discount,Emp});

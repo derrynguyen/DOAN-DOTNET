@@ -16,6 +16,8 @@ namespace QUANCAFFE.Components.BanHang
         int pQuantity;
         List<OrderDetail> listOrderDetails = new List<OrderDetail>();
         bool clicked = false;
+       
+
         public BanHang()
         {
             InitializeComponent();
@@ -26,6 +28,7 @@ namespace QUANCAFFE.Components.BanHang
             btnSuDungDiem.Enabled = false;
             btnTimKiem.Click += BtnTimKiem_Click;
             txtTenKhachHang.TextChange += TxtTenKhachHang_TextChange;
+            txtTenKhachHang.Text = "No MememberShip";
         }
 
         private void TxtTenKhachHang_TextChange(object sender, EventArgs e)
@@ -259,7 +262,7 @@ namespace QUANCAFFE.Components.BanHang
 
 
             int pSum = (int)totail;
-            string pDayOrder = today.ToString();
+            DateTime pDayOrder = today;
             string pPhone = textSearch.Text;
             double pPoint = (double)pSum * 0.1;
 
@@ -291,6 +294,7 @@ namespace QUANCAFFE.Components.BanHang
             textSearch.Clear();
             txtDiem.Clear();
             txtTenKhachHang.Text = "No MememberShip";
+            txtDiem.Text = "0";
             clicked = false;
 
             //Khách hàng không là thành viên thì tên mặc định là No MememberShip
