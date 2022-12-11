@@ -78,6 +78,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\KhoHang\ThemMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\KhoHang\ThemMon.Designer.cs">
+      <DependentUpon>ThemMon.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyCoffeDTO\Account.cs" />
     <Compile Include="MyCoffeDTO\CustommerDAO.cs" />
     <Compile Include="MyCoffeDTO\DataProvider.cs" />
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\KhoHang\KhoHang.resx">
       <DependentUpon>KhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\KhoHang\ThemMon.resx">
+      <DependentUpon>ThemMon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\LichSu\LichSu.resx">
       <DependentUpon>LichSu.cs</DependentUpon>
