@@ -14,6 +14,9 @@ namespace QUANCAFFE.Components.ThongKe
 {
     public partial class ThongKe : UserControl
     {
+        DateTime dateTime = DateTime.Today;
+
+        BindingSource BindingSourceLine = new BindingSource();
         public ThongKe()
         {
             InitializeComponent();
@@ -22,8 +25,7 @@ namespace QUANCAFFE.Components.ThongKe
 
         private void ThongKe_Load(object sender, EventArgs e)
         {
-            BindingSource BindingSourceLine = new BindingSource();
-
+            dateTimeWork.Value = dateTime;
             loadThongKe();
             loadThongKeSP();
             ThongKeDanhThu.Show();
@@ -31,7 +33,8 @@ namespace QUANCAFFE.Components.ThongKe
             ThongKeBangLuong.Hide();
             XepLineNhanVien.Hide();
             gridviewEmpLine.DataSource = BindingSourceLine;
-
+            loadEmp(dateTime);
+            BingDingLine();
         }
 
         public void loadThongKeLuong()
@@ -55,6 +58,15 @@ namespace QUANCAFFE.Components.ThongKe
             string query = "select * from getSPBanChay()";
             DataTable dataTable = DataProvider.Instance.ExecutedQuery(query);
             GridViewSPBanChay.DataSource = dataTable;
+        }
+        public void loadComboBoxEmp()
+        {
+            string query1 = "select FullName from Employees";
+            DataTable dataTable1 = DataProvider.Instance.ExecutedQuery(query1);
+            txtNameEmpLine.DataSource = dataTable1;
+            txtNameEmpLine.DisplayMember = "FullName";
+            txtNameEmpLine.ValueMember = "FullName";
+            gridviewEmpLine.AllowUserToAddRows = true;
         }
         public void loadEmp(DateTime dateTime)
         {
@@ -90,6 +102,68 @@ namespace QUANCAFFE.Components.ThongKe
             ThongKeDanhThu.Hide();
             ThongKeBangLuong.Hide();
             XepLineNhanVien.Show();
+        }
+
+        private void btnThemLine_Click(object sender, EventArgs e)
+        {
+            string pName = txtNameEmpLine.SelectedValue.ToString();
+            int pid = EmployeesDAO.Instance.getIdEmp(pName);
+            int pBegin = int.Parse(txtTimeBegin.Text);
+            int pEnd = int.Parse(txtTimeEnd.Text);
+            string pLine = cbNameLine.SelectedItem.ToString();
+            DateTime pDay = dateTimeWork.Value;
+            if (SalaryDAO.Instance.addLine(pLine, pDay, pBegin, pEnd, pid))
+            {
+                MessageBox.Show("Succsess!!");
+            }
+            else
+            {
+                MessageBox.Show("Wrongg!!");
+
+            }
+            loadEmp(dateTime);
+        }
+
+        private void btnXoaLine_Click(object sender, EventArgs e)
+        {
+            string pNameEmp = txtNameEmpLine.SelectedValue.ToString();
+            string pName = cbNameLine.SelectedItem.ToString();
+            DateTime pDay = dateTimeWork.Value;
+            int pidEmp = EmployeesDAO.Instance.getIdEmp(pNameEmp);
+            int pid = SalaryDAO.Instance.getIdLine(pidEmp, pDay);
+            int pEnd = int.Parse(txtTimeEnd.Text);
+            int pBegin = int.Parse(txtTimeBegin.Text);
+
+            if (SalaryDAO.Instance.delLine(pidEmp, pDay))
+            {
+                MessageBox.Show("Suses!!");
+            }
+            else
+            {
+                MessageBox.Show("Worong");
+            }
+            loadEmp(dateTime);
+        }
+
+        private void btnSuaLine_Click(object sender, EventArgs e)
+        {
+            string pNameEmp = txtNameEmpLine.SelectedValue.ToString();
+            string pName = cbNameLine.SelectedItem.ToString();
+            DateTime pDay = dateTimeWork.Value;
+            int pidEmp = EmployeesDAO.Instance.getIdEmp(pNameEmp);
+            int pid = SalaryDAO.Instance.getIdLine(pidEmp, pDay);
+            int pEnd = int.Parse(txtTimeEnd.Text);
+            int pBegin = int.Parse(txtTimeBegin.Text);
+
+            if (SalaryDAO.Instance.updateLine(pid, pName, pDay, pEnd, pBegin, pidEmp))
+            {
+                MessageBox.Show("Suses!!");
+            }
+            else
+            {
+                MessageBox.Show("Worong");
+            }
+            loadEmp(dateTime);
         }
     }
 }
