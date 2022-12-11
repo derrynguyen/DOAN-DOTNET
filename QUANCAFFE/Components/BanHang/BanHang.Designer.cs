@@ -72,6 +72,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.txtSoLuong = new Guna.UI2.WinForms.Guna2NumericUpDown();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.NumberDiscount = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.txtTotail = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel5 = new System.Windows.Forms.Panel();
@@ -84,7 +85,6 @@
             this.btnXoaTatCa = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.panel12 = new System.Windows.Forms.Panel();
             this.txtDiem = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.NumberDiscount = new Guna.UI2.WinForms.Guna2ComboBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.txtDisPlayUser = new Guna.UI2.WinForms.Guna2TextBox();
             this.BanHangHeader.SuspendLayout();
@@ -818,6 +818,32 @@
             this.panel4.Size = new System.Drawing.Size(276, 37);
             this.panel4.TabIndex = 4;
             // 
+            // NumberDiscount
+            // 
+            this.NumberDiscount.BackColor = System.Drawing.Color.Transparent;
+            this.NumberDiscount.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.NumberDiscount.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.NumberDiscount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.NumberDiscount.FocusedColor = System.Drawing.Color.Empty;
+            this.NumberDiscount.FocusedState.Parent = this.NumberDiscount;
+            this.NumberDiscount.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.NumberDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.NumberDiscount.FormattingEnabled = true;
+            this.NumberDiscount.HoverState.Parent = this.NumberDiscount;
+            this.NumberDiscount.ItemHeight = 30;
+            this.NumberDiscount.Items.AddRange(new object[] {
+            "1",
+            "0.5",
+            "0.25",
+            "0.1"});
+            this.NumberDiscount.ItemsAppearance.Parent = this.NumberDiscount;
+            this.NumberDiscount.Location = new System.Drawing.Point(0, 0);
+            this.NumberDiscount.Name = "NumberDiscount";
+            this.NumberDiscount.ShadowDecoration.Parent = this.NumberDiscount;
+            this.NumberDiscount.Size = new System.Drawing.Size(276, 36);
+            this.NumberDiscount.TabIndex = 0;
+            this.NumberDiscount.SelectedIndexChanged += new System.EventHandler(this.NumberDiscount_SelectedIndexChanged);
+            // 
             // panel8
             // 
             this.tableLayoutPanel2.SetColumnSpan(this.panel8, 2);
@@ -1309,32 +1335,6 @@
             this.txtDiem.TextPlaceholder = "";
             this.txtDiem.UseSystemPasswordChar = false;
             this.txtDiem.WordWrap = true;
-            // 
-            // NumberDiscount
-            // 
-            this.NumberDiscount.BackColor = System.Drawing.Color.Transparent;
-            this.NumberDiscount.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.NumberDiscount.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.NumberDiscount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.NumberDiscount.FocusedColor = System.Drawing.Color.Empty;
-            this.NumberDiscount.FocusedState.Parent = this.NumberDiscount;
-            this.NumberDiscount.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.NumberDiscount.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.NumberDiscount.FormattingEnabled = true;
-            this.NumberDiscount.HoverState.Parent = this.NumberDiscount;
-            this.NumberDiscount.ItemHeight = 30;
-            this.NumberDiscount.Items.AddRange(new object[] {
-            "1",
-            "0.5",
-            "0.25",
-            "0.1"});
-            this.NumberDiscount.ItemsAppearance.Parent = this.NumberDiscount;
-            this.NumberDiscount.Location = new System.Drawing.Point(0, 0);
-            this.NumberDiscount.Name = "NumberDiscount";
-            this.NumberDiscount.ShadowDecoration.Parent = this.NumberDiscount;
-            this.NumberDiscount.Size = new System.Drawing.Size(276, 36);
-            this.NumberDiscount.TabIndex = 0;
-            this.NumberDiscount.SelectedIndexChanged += new System.EventHandler(this.NumberDiscount_SelectedIndexChanged);
             // 
             // panel6
             // 
