@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyCoffee.Same;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,8 @@ namespace QUANCAFFE.Components.ThongKe
 
         private void ThongKe_Load(object sender, EventArgs e)
         {
+            loadThongKe();
+            loadThongKeSP();
         }
 
       
@@ -28,7 +31,18 @@ namespace QUANCAFFE.Components.ThongKe
             this.Hide();
         }
 
-      
-     
+        public void loadThongKe()
+        {
+            string query = "select * from getDoanhThu()";
+            DataTable dataTable = DataProvider.Instance.ExecutedQuery(query);
+            dataGridViewDoanhThu.DataSource = dataTable;
+        }
+        public void loadThongKeSP()
+        {
+            string query = "select * from getSPBanChay()";
+            DataTable dataTable = DataProvider.Instance.ExecutedQuery(query);
+            GridViewSPBanChay.DataSource = dataTable;
+        }
+
     }
 }

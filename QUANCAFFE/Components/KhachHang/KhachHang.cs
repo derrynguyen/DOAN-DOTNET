@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyCoffee.Same;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,11 +16,18 @@ namespace QUANCAFFE.Components.KhachHang
         public KhachHang()
         {
             InitializeComponent();
+            loadCustomerList();
         }
 
         private void btnQuayLai_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+        public void loadCustomerList()
+        {
+            string query = "select *  from Custommers ";
+
+            dataGridViewCustomer.DataSource = DataProvider.Instance.ExecutedQuery(query);
         }
     }
 }

@@ -29,3 +29,4 @@ D:\DOT NET\QUANCAFFE\QUANCAFFE\obj\Debug\QUANCAFFE.exe
 D:\DOT NET\QUANCAFFE\QUANCAFFE\obj\Debug\QUANCAFFE.pdb
 D:\DOT NET\QUANCAFFE\QUANCAFFE\obj\Debug\QUANCAFFE.Components.KhoHang.ThemMon.resources
 D:\DOT NET\QUANCAFFE\QUANCAFFE\obj\Debug\QUANCAFFE.Components.NhanVien.ThemNhanVien.resources
+D:\DOT NET\QUANCAFFE\QUANCAFFE\bin\Debug\Bunifu.UI.WinForms.BunifuCircleProgress.dll
