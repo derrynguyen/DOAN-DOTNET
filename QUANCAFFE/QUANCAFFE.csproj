@@ -84,6 +84,12 @@
     <Compile Include="Components\KhoHang\ThemMon.Designer.cs">
       <DependentUpon>ThemMon.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\NhanVien\ThemNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Components\NhanVien\ThemNhanVien.Designer.cs">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="MyCoffeDTO\Account.cs" />
     <Compile Include="MyCoffeDTO\CustommerDAO.cs" />
     <Compile Include="MyCoffeDTO\DataProvider.cs" />
@@ -165,6 +171,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\NhanVien\NhanVien.resx">
       <DependentUpon>NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\NhanVien\ThemNhanVien.resx">
+      <DependentUpon>ThemNhanVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ThongKe\ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>

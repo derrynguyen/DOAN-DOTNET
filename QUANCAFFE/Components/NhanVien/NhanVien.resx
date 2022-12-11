@@ -186,15 +186,6 @@
   <metadata name="Column3.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="btnClear.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAI8AAAArCAYAAABB7ttrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACWSURBVHhe7dKxEUBAAABBrSiD/rvQgFwBvNwwLt5go0tv
-        2ud1G074abvneQrwyTxk5iEzD5l5yMxDZh4y85CZh8w8ZOYhMw+ZecjMQ2YeMvOQmYfMPGTmITMPmXnI
-        zENmHjLzkJmHzDxk5iEzD5l5yMxDZh4y85CZh8w8ZOYhMw+ZecjMQ2YeMvOQmYdszLMcTwHeLccFNz8+
-        ExsBYxMAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="txtMatKhau.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAI8AAAArCAYAAABB7ttrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
