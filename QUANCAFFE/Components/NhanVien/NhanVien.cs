@@ -128,6 +128,18 @@ namespace QUANCAFFE.Components.NhanVien
             loadEmpList();
         }
 
-     
+        private void BtnSearchEmp_Click(object sender, EventArgs e)
+        {
+            string pFind = txtTimKiem.Text;
+            DataTable dataTable = EmployeesDAO.Instance.iFindEmp(pFind);
+            if (dataTable.Rows.Count == 0)
+            {
+                MessageBox.Show("Employee" + pFind + "not esxit");
+            }
+            else
+            {
+                dataNhanVien.DataSource = dataTable;
+            }
+        }
     }
 }

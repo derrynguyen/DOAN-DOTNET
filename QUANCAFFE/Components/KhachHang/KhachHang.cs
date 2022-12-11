@@ -1,4 +1,5 @@
-﻿using MyCoffee.Same;
+﻿using MyCoffee.MyCoffeeDAO;
+using MyCoffee.Same;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,6 +29,20 @@ namespace QUANCAFFE.Components.KhachHang
             string query = "select *  from Custommers ";
 
             dataGridViewCustomer.DataSource = DataProvider.Instance.ExecutedQuery(query);
+        }
+
+        private void BtnSearchCus_Click(object sender, EventArgs e)
+        {
+            string pFind = txtTimKiem.Text;
+            DataTable dataTable = CustommerDAO.Instance.iFindCus(pFind);
+            if (dataTable.Rows.Count == 0)
+            {
+                MessageBox.Show("Custommer" + pFind + "not esxit");
+            }
+            else
+            {
+                dataGridViewCustomer.DataSource = dataTable;
+            }
         }
     }
 }
